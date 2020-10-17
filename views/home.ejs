@@ -1,0 +1,18 @@
+<%- include ("partials/header")%>
+
+<form action="/location" method="POST">
+    <h5>City Name:</h5> <input type="text" name="city" placeholder="Enter your city name" required>
+    <br><br><br>
+    <h5>Choose your Country:</h5>
+    <br>
+    <select id="country" name="country">
+        <option value="IN">India</option>
+        <option value="US">United States</option>
+        <option value="AU">Australia</option>
+        <option value="GB">Great Britain</option>
+    </select>
+    <br><br><br>
+    <input type="submit" class="submit">
+</form>
+
+<%- include ("partials/footer")%>
