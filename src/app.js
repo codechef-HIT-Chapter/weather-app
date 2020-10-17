@@ -45,7 +45,7 @@ app.post('/location',(req,res)=>{
     //parsing body variables
     city=req.body.city.toLowerCase();
     country=req.body.country;
-    location +=city;
+    location =location+city;
     //api request
     request(location,(error,response)=>{
         data=JSON.parse(response["body"]);
