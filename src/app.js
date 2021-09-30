@@ -7,7 +7,7 @@ const path=require('path');
 const { Console } = require('console');
 
 const app = express()
-const port = process.env.PORT || 5000
+const port = process.env.PORT || 3000
 
 //paths
 const publicPath=path.join(__dirname,'../public')
@@ -45,7 +45,7 @@ app.post('/location',(req,res)=>{
     //parsing body variables
     city=req.body.city.toLowerCase();
     country=req.body.country;
-    location =location+city;
+    location +=city;
     //api request
     request(location,(error,response)=>{
         data=JSON.parse(response["body"]);
